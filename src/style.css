@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+header {
+  padding: 0px 50px;
+  align-items: center;
+}
+
+header h1 {
+  grid-column: span 6;
+}
+
+header nav {
+  grid-column: span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: #333;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+main,
+section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+main .my-site {
+  grid-column: span 5;
+}
+
+main img {
+  grid-column: 7 / span 6;
+  width: 100%;
+  border-radius: 5px;
+}
+
+section > h2 {
+  grid-column: span 12;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 20px;
+}
+
+section .card {
+  grid-column: span 4;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+section .about-card {
+  grid-column: span 3;
+  background: white;
+  padding-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+}
+
+section .about-card a {
+  color: hsl(204, 86%, 53%);
+  font-size: 1.2em;
+}
+
+footer > .contact {
+  grid-column: span 12;
+  text-align: center;
+  padding-top: 10px;
+  background: hsl(0, 0%, 71%);
+  margin-bottom: -30px;
+}
+
+footer > .contact-info {
+  grid-column: span 12;
+  text-align: center;
+  padding-top: 10px;
+  background: hsl(0, 0%, 29%);
+}
+
+footer > .contact-address {
+  justify-self: end;
+}
+
+footer .contact-address,
+.address-fa {
+  color: white;
+}
+
+footer p {
+  margin: auto;
+}
+
+footer .address-link {
+  margin: 10px 0 10px 0;
+}
+
+footer .address-fa {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 960px) {
+  main img {
+    grid-column: 2 / span 10;
+  }
+
+  main .my-site {
+    grid-column: 3 / span 8;
+    text-align: center;
+  }
+
+  section .card {
+    grid-column: 3 / span 8;
+  }
+
+  section .about-card {
+    grid-column: 3 / span 8;
+  }
+}
